@@ -1,9 +1,26 @@
-var html = '<a href="index.html"><img class="logo" src="img/logo.png"></a>'
+(function () {
+    const navbar = document.getElementById("navbar");
+    if (!navbar) return;
 
-html += '<div class="navlink"><a href="index.html"><button>Home</button></a></div>';
-html += '<div class="navlink"><a href="games.html"><button>Games</button></a></div>';
-html += '<div class="navlink"><a href="about.html"><button>About</button></a></div>';
-html += '<div class="navlink"><a href="socials.html"><button>Socials</button></a></div>';
-html += '<div class="navlink"><a href="news.html"><button>News</button></a></div>';
+    let currentPage = window.location.pathname.split("/").pop() || "index.html";
+    if (!currentPage.includes(".")) currentPage += ".html";
+    const links = [
+        ["index.html", "Home"],
+        ["games.html", "Games"],
+        ["about.html", "About"],
+        ["news.html", "News"],
+        ["devlogs.html", "Devlogs"]
+    ];
 
-document.getElementById("navbar").innerHTML = html;
+    const navLinks = links.map(([href, label]) => {
+        const current = currentPage === href || (href === "devlogs.html" && currentPage.startsWith("devlog"));
+        return `<a class="navlink${current ? " is-current" : ""}" href="${href}"${current ? ' aria-current="page"' : ""}>${label}</a>`;
+    }).join("");
+
+    navbar.innerHTML = `
+        <a class="logo-link" href="index.html" aria-label="Dark Thunder Games home">
+            <img class="logo" src="img/logo.png" alt="Dark Thunder Games">
+        </a>
+        <div class="nav-buttons">${navLinks}</div>
+    `;
+})();

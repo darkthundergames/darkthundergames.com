@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <script src="https://kit.fontawesome.com/99e2ff344d.js" crossorigin="anonymous"></script>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#3c3356" />
+        <meta name="description" content="Welcome to Dark Thunder Games, an independent team making creative games. Discover Canvas Chaos and our latest projects." />
         <title>DTG - Home</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" href="img/favicon.png" type="image/png">
@@ -12,18 +15,37 @@
             <script type="text/javascript" src="navbar.js"></script>
         </nav>
 
-        <main>
-            <h1>Welcome to Dark Thunder Games!</h1>
-            <p><strong>Canvas Chaos</strong> is going under a remake!</p>
-            <br>
-            <img src="img/canvaschaos_reworkimg.png" alt="Canvas Chaos Promo Image" style="max-width: 25%; height: auto;"/>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_Z_iut467gw?si=1MMbvvUmY_JWxP-b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <main class="home-page">
+            <section class="home-intro">
+                <h1>Welcome to Dark Thunder Games!</h1>
+                <p>We're an independent game development team making fun, creative games.</p>
+            </section>
+
+            <section class="home-feature" aria-labelledby="canvas-chaos-title">
+                <img class="home-feature-image" src="img/canvaschaos_promo.png" alt="Canvas Chaos game artwork" />
+                <div class="home-feature-copy">
+                    <h2 id="canvas-chaos-title">Canvas Chaos</h2>
+                    <p>A fast-paced 2D platformer with wild transformations, unpredictable enemies, and challenging levels.</p>
+                    <p class="home-game-status">Currently in development</p>
+                    <a class="darkbutton home-game-link" href="games.html">Explore our games</a>
+                </div>
+            </section>
+
+            <section class="home-video" aria-labelledby="preview-title">
+                <h2 id="preview-title">See Canvas Chaos in action</h2>
+                <p>Take a look at the city level preview.</p>
+                <div class="home-video-frame">
+                    <iframe src="https://www.youtube-nocookie.com/embed/_Z_iut467gw?si=1MMbvvUmY_JWxP-b"
+                        title="Canvas Chaos city level preview"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
         </main>
+
         <footer id="footer">
             <script type="text/javascript" src="footer.js"></script>
         </footer>

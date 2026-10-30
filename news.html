@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <script src="https://kit.fontawesome.com/99e2ff344d.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DTG - News</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/favicon.png" type="image/png">
@@ -23,7 +24,10 @@
 
   <script>
     fetch('data/news.json')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) throw new Error(response.status);
+        return response.json();
+      })
       .then(newsItems => {
         const container = document.getElementById('news-container');
         container.innerHTML = '';
@@ -34,6 +38,13 @@
           const newsDiv = document.createElement('div');
           newsDiv.className = 'news-item';
 
+          const date = new Date(item.date).toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC'
+          });
+
           let imgHtml = '';
           if (item.image) {
             imgHtml = `<img src="${item.image}" alt="${item.title} image" class="news-image" />`;
@@ -42,7 +53,7 @@
           newsDiv.innerHTML = `
             ${imgHtml}
             <div class="news-text">
-                <div class="news-date">${item.date}</div>
+                <div class="news-date">${date}</div>
                 <div class="news-title">${item.title}</div>
                 <div class="news-content">${item.content}</div>
             </div>
