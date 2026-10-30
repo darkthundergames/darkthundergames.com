@@ -1,14 +1,19 @@
 [
     {
+        "date": "2026-10-27",
+        "title": "Canvas Chaos Devlog 1 is up!",
+        "content": "The first Canvas Chaos devlog is here! Read about Tapi's redesign, the Crystal Caves remake and how far along the levels are in the <a href='devlog-27-10-2026.html'>full devlog</a>."
+    },
+    {
         "date": "2026-05-18",
         "title": "Canvas Chaos City Level Preview Video!",
-        "content": "Check out the latest preview video for the <a href='https://www.youtube.com/watch?v=_Z_iut467gw'>Canvas Chaos City level! </a>",
+        "content": "Check out the latest preview video for the <a href='https://www.youtube.com/watch?v=_Z_iut467gw'>Canvas Chaos City level!</a>",
         "image": "img/canvaschaos_citylevelpreview.png"
     },
     {
         "date": "2025-06-26",
         "title": "Bobby Bowling is OUT NOW!",
-        "content": "Bobby Bowling has been released! Knock down pins and get big scores in this top down bowling game! Although its very short, many updates are coming soon! You can find the link in the Games page",
+        "content": "Bobby Bowling has been released! Knock down pins and get big scores in this top down bowling game! Although it's very short, many updates are coming soon! You can find the link in the Games page",
         "image": "img/bobbybowling_promo.png"
     },
     {
